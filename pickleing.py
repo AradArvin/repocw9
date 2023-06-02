@@ -18,9 +18,8 @@ def pickleing(list_of_ppl):
 def unpickleing():
     with open("pickeled.pickle", "rb") as f:
         loaded_list = pickle.load(f)
-        print(loaded_list)
         for i in range(len(loaded_list)):
-            print(loaded_list[i].name, loaded_list[i].age, loaded_list[i].adress)
+            print(f"name: {loaded_list[i].name} -- age: {loaded_list[i].age} -- adress: {loaded_list[i].adress}")
 
 pickleing(person_list)
 unpickleing()
